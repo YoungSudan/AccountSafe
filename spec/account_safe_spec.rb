@@ -5,7 +5,7 @@ RSpec.describe AccountSafe do
     expect(AccountSafe::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "calculate assets given liabilites and equity" do
+    expect(AccountSafe.assets(liab: 10,  equ: 10)).to eq(20)
   end
 end

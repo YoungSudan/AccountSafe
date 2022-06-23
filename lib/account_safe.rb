@@ -2,7 +2,11 @@
 
 require_relative "AccountSafe/version"
 
+# Main class for calculating slimple finacial equations
 module AccountSafe
   class Error < StandardError; end
-  # Your code goes here...
+
+  def self.assets(liab:, equ:)
+    liab + equ
+  end
 end

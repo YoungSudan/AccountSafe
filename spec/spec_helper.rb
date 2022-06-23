@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "AccountSafe"
+require "account_safe"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
