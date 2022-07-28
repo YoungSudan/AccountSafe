@@ -31,6 +31,11 @@ Style/Documentation:
   Exclude:
     - 'spec/**/*'
     - 'test/**/*'
-    - 'lib/AccountSafe/balance.rb'
-    - 'lib/AccountSafe/income.rb'
+    - 'lib/AccountSafe/*'
+Lint/EmptyFile: 
+  Exclude: 
+    - 'lib/AccountSafe/account.rb'
 
+Style/GuardClause:
+  Exclude:
+    - 'lib/AccountSafe/import_cvs.rb'

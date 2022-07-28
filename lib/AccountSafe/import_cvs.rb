@@ -14,11 +14,9 @@ module AccountSafe
       @account = account
     end
 
-
     def self.import!(file_path)
       new(file_path).import
     end
-
 
     def import
       validate_file
@@ -30,8 +28,10 @@ module AccountSafe
     end
 
     def validate_file
-        raise FileNotFound.new("Could not find file #{File.basename(file_path)}") unless File.file?(file_path)
-        raise InvalidFileType.new("File type #{File.extname(file_path)} is not supported") unless File.extname(file_path) != '.csv'
+      raise FileNotFound, "Could not find file #{File.basename(file_path)}" unless File.file?(file_path)
+      unless File.extname(file_path) != '.csv'
+        raise InvalidFileType("File type #{File.extname(file_path)} is not supported")
+      end
     end
   end
 end
