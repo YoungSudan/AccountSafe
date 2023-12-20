@@ -8,4 +8,6 @@ require_relative 'AccountSafe/account'
 # Main class for calculating slimple finacial equations
 module AccountSafe
   class Error < StandardError; end
+  class MathError < StandardError; end
+
 end
